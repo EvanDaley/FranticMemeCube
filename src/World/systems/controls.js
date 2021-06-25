@@ -9,7 +9,7 @@ function createControls(camera, canvas) {
     controls.enableKeys = true;
 
     controls.autoRotate = true;
-    controls.autoRotateSpeed = 100;
+    controls.autoRotateSpeed = 50;
 
     controls.minDistance = 3;
     controls.maxDistance = 20;
