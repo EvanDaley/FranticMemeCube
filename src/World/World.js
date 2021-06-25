@@ -26,8 +26,8 @@ class World {
 
     const controls = createControls(camera, renderer.domElement);
 
-    const cameraFolder = gui.addFolder("Camera")
-    cameraFolder.add(controls, "autoRotateSpeed", 0, 500, 1)
+    // const cameraFolder = gui.addFolder("Camera")
+    gui.add(controls, "autoRotateSpeed", 0, 500, 1).name("Speed");
 
     const cube = createCube();
     const { ambientLight, mainLight } = createLights();
