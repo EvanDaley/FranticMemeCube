@@ -7,11 +7,14 @@ import { createRenderer } from './systems/renderer.js';
 import { Resizer } from './systems/Resizer.js';
 import { Loop } from './systems/Loop.js';
 import { createControls } from './systems/controls.js';
+import { GUI } from 'https://unpkg.com/three@0.127.0/examples/jsm/libs/dat.gui.module.js';
+// import { OrbitContro'https://unpkg.com/three@0.127.0/examples/jsm/controls/OrbitControls.js';
 
 let camera;
 let renderer;
 let scene;
 let loop;
+const gui = new GUI()
 
 class World {
   constructor(container) {
@@ -22,6 +25,9 @@ class World {
     container.append(renderer.domElement);
 
     const controls = createControls(camera, renderer.domElement);
+
+    const cameraFolder = gui.addFolder("Camera")
+    cameraFolder.add(controls, "autoRotateSpeed", 0, 500, 1)
 
     const cube = createCube();
     const { ambientLight, mainLight } = createLights();

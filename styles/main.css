@@ -24,7 +24,7 @@ h1 {
 h2 {
   /* position the heading */
   /* position: absolute; */
-  width: 100%;
+  /* width: 100%; */
 
   /* make sure that the heading is drawn on top */
   z-index: 1;
