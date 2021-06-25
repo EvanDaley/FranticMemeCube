@@ -25,12 +25,12 @@ function createMaterial(file) {
 function createCube() {
   const geometry = new BoxBufferGeometry(2, 2, 2);
 
-  const m1 = createMaterial('/1.png');
-  const m2 = createMaterial('/2.png');
-  const m3 = createMaterial('/3.png');
-  const m4 = createMaterial('/4.png');
-  const m5 = createMaterial('/5.png');
-  const m6 = createMaterial('/6.png');
+  const m1 = createMaterial('1.png');
+  const m2 = createMaterial('2.png');
+  const m3 = createMaterial('3.png');
+  const m4 = createMaterial('4.png');
+  const m5 = createMaterial('5.png');
+  const m6 = createMaterial('6.png');
 
   const cube = new Mesh(geometry, [m6,m3,m1,m4,m5,m2]);
 
